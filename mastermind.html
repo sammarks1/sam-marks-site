@@ -44,8 +44,37 @@
 
       <hr class="rule">
 
-      <!-- TODO: replace apply@example.com with real intake email; upgrade to a proper form wired to the submissions backend -->
-      <a class="btn" href="mailto:apply@example.com?subject=Build%20Mastermind%20Application">Apply →</a>
+      <h2>Apply</h2>
+      <p class="lead">Membership is by application. Tell us a little about yourself and what you're building — we read every application.</p>
+
+      <form id="apply-form" class="apply-form" novalidate>
+        <div class="field">
+          <label for="f-name">Name <span class="req">*</span></label>
+          <input id="f-name" name="name" type="text" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="f-email">Email <span class="req">*</span></label>
+          <input id="f-email" name="email" type="email" required autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="f-location">Location / City</label>
+          <input id="f-location" name="location" type="text" autocomplete="address-level2">
+        </div>
+        <div class="field">
+          <label for="f-building">What are you building? <span class="req">*</span></label>
+          <textarea id="f-building" name="building" rows="3" required></textarea>
+        </div>
+        <div class="field">
+          <label for="f-why">Why do you want to join?</label>
+          <textarea id="f-why" name="why" rows="4"></textarea>
+        </div>
+        <p id="form-error" class="form-error" role="alert" hidden></p>
+        <button type="submit" class="btn" id="apply-submit">Submit application →</button>
+      </form>
+
+      <div id="apply-thanks" class="apply-thanks" hidden>
+        <p>Thank you — your application has been received. We'll be in touch.</p>
+      </div>
     </div>
   </main>
 
@@ -60,6 +89,69 @@
       </span>
     </div>
   </footer>
+
+  <script>
+    // CAPTURE_ENDPOINT: Apps Script Web App exec URL for form submissions.
+    // Empty string = backend not live yet; the form will NOT claim success.
+    const CAPTURE_ENDPOINT = '';
+
+    (function () {
+      const form = document.getElementById('apply-form');
+      const thanks = document.getElementById('apply-thanks');
+      const errBox = document.getElementById('form-error');
+      const submitBtn = document.getElementById('apply-submit');
+
+      function showError(msg) {
+        errBox.textContent = msg;
+        errBox.hidden = false;
+      }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        errBox.hidden = true;
+
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+
+        const data = {
+          name: form.name.value.trim(),
+          email: form.email.value.trim(),
+          location: form.location.value.trim(),
+          building: form.building.value.trim(),
+          why: form.why.value.trim(),
+          form: 'Mastermind Application',
+          source: 'sam-marks-site/mastermind'
+        };
+
+        // If no endpoint is configured, never claim the application was saved.
+        if (!CAPTURE_ENDPOINT) {
+          showError('Applications open soon.');
+          return;
+        }
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Submitting…';
+
+        fetch(CAPTURE_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify(data)
+        })
+          .then(function () {
+            form.hidden = true;
+            thanks.hidden = false;
+            thanks.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          })
+          .catch(function () {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Submit application →';
+            showError('Something went wrong sending your application. Please try again, or email us directly.');
+          });
+      });
+    })();
+  </script>
 
   <script src="nav.js"></script>
 </body>
