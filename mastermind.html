@@ -91,22 +91,29 @@
   </footer>
 
   <script>
-    // CAPTURE_ENDPOINT: Apps Script Web App exec URL for form submissions.
-    // Empty string = backend not live yet; the form will NOT claim success.
-    const CAPTURE_ENDPOINT = '';
+    // Capture backend: submissions POST to a Google Form (public endpoint, no server needed).
+    // A scheduled sync mirrors new responses into the Submissions sheet and notifies Sam.
+    const FORM_ACTION = "https://docs.google.com/forms/d/e/1FAIpQLScHynenwXzf6IjRcw6tta0Sulr8LPgb0Dp2qQHqqOFsFkqKog/formResponse";
+    const FIELD_MAP = {
+      name:     "entry.133058275",
+      email:    "entry.978807328",
+      location: "entry.1790158531",
+      building: "entry.1464149873",
+      why:      "entry.1129966949"
+    };
 
     (function () {
-      const form = document.getElementById('apply-form');
-      const thanks = document.getElementById('apply-thanks');
-      const errBox = document.getElementById('form-error');
-      const submitBtn = document.getElementById('apply-submit');
+      const form = document.getElementById("apply-form");
+      const thanks = document.getElementById("apply-thanks");
+      const errBox = document.getElementById("form-error");
+      const submitBtn = document.getElementById("apply-submit");
 
       function showError(msg) {
         errBox.textContent = msg;
         errBox.hidden = false;
       }
 
-      form.addEventListener('submit', function (e) {
+      form.addEventListener("submit", function (e) {
         e.preventDefault();
         errBox.hidden = true;
 
@@ -115,39 +122,39 @@
           return;
         }
 
-        const data = {
+        const values = {
           name: form.name.value.trim(),
           email: form.email.value.trim(),
           location: form.location.value.trim(),
           building: form.building.value.trim(),
-          why: form.why.value.trim(),
-          form: 'Mastermind Application',
-          source: 'sam-marks-site/mastermind'
+          why: form.why.value.trim()
         };
 
-        // If no endpoint is configured, never claim the application was saved.
-        if (!CAPTURE_ENDPOINT) {
-          showError('Applications open soon.');
-          return;
-        }
+        const body = new URLSearchParams();
+        Object.keys(FIELD_MAP).forEach(function (k) {
+          body.append(FIELD_MAP[k], values[k] || "");
+        });
 
         submitBtn.disabled = true;
-        submitBtn.textContent = 'Submitting…';
+        submitBtn.textContent = "Submitting…";
 
-        fetch(CAPTURE_ENDPOINT, {
-          method: 'POST',
-          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-          body: JSON.stringify(data)
+        // Google Forms does not send CORS headers, so use no-cors: the submit
+        // still records; we cannot read the response, which is expected.
+        fetch(FORM_ACTION, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: body.toString()
         })
           .then(function () {
             form.hidden = true;
             thanks.hidden = false;
-            thanks.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            thanks.scrollIntoView({ behavior: "smooth", block: "center" });
           })
           .catch(function () {
             submitBtn.disabled = false;
-            submitBtn.textContent = 'Submit application →';
-            showError('Something went wrong sending your application. Please try again, or email us directly.');
+            submitBtn.textContent = "Submit application →";
+            showError("Something went wrong sending your application. Please try again, or email us directly.");
           });
       });
     })();
