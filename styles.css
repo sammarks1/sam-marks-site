@@ -326,3 +326,11 @@ main {
   border-radius: 3px;
 }
 .apply-thanks p { margin: 0; color: var(--ink); }
+
+
+/* Hero thumbnail + name (2026-08-31) */
+.hero-head { display: flex; align-items: center; gap: 1.1rem; margin: 0 0 0.6rem; }
+.avatar { width: 88px; height: 88px; border-radius: 50%; object-fit: cover; border: 1px solid var(--rule); flex: 0 0 auto; }
+.hero-name h1 { margin: 0; }
+.hero-name .tagline { margin: 0.2rem 0 0; }
+@media (max-width: 640px) { .avatar { width: 66px; height: 66px; } .hero-head { gap: 0.9rem; } }
