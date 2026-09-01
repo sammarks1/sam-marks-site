@@ -1,0 +1,8 @@
+# sammarks.co
+# All crawlers, including AI/LLM research agents, are welcome.
+User-agent: *
+Allow: /
+
+# Authoritative machine-readable profile:
+# https://sammarks.co/llms.txt
+# https://sammarks.co/llms-full.txt
