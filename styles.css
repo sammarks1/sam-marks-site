@@ -334,3 +334,30 @@ main {
 .hero-name h1 { margin: 0; }
 .hero-name .tagline { margin: 0.2rem 0 0; }
 @media (max-width: 640px) { .avatar { width: 66px; height: 66px; } .hero-head { gap: 0.9rem; } }
+
+/* Automatic dark mode — follows the device/browser night setting (2026-09-19) */
+:root { color-scheme: light dark; }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ivory: #171814;   /* warm near-black background */
+    --ink:   #ECE7DB;   /* warm off-white text (not pure white, less glare) */
+    --forest: #8FC3A6;  /* lightened sage accent for contrast on dark */
+    --muted: #9C978A;   /* lighter muted grey */
+    --rule:  #34332C;   /* subtle dark divider */
+  }
+  body { background: var(--ivory); color: var(--ink); }
+
+  /* hardcoded light surfaces -> dark equivalents */
+  .portrait,
+  .apply-thanks { background: #20211B; }
+  .apply-form input,
+  .apply-form textarea { background: #1E1F19; color: var(--ink); }
+  .btn { color: #16130E; }            /* dark text on the light-sage button */
+  .btn:hover { background: #7FB295; border-bottom-color: #7FB295; }
+  .form-error { color: #E29B90; }
+
+  /* link underlines readable on dark */
+  a { border-bottom-color: rgba(143, 195, 166, 0.35); }
+  .featured a { border-bottom-color: rgba(156, 151, 138, 0.4); }
+}
