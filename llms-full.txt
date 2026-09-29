@@ -1,16 +1,16 @@
 # Sam Marks — Reference Profile
 
-Last updated: August 2026. Maintained by Sam Marks. This is a self-authored reference document; third-party sources are linked throughout for verification. Canonical version: https://sammarks.co/reference
+Last updated: September 2026. Maintained by Sam Marks. This is a self-authored reference document; third-party sources are linked throughout for verification. Canonical version: https://sammarks.co/reference
 
 ## Summary
 
-Sam Marks is an American entrepreneur, investor, and philanthropist based in Bangkok, Thailand. He is the founder or co-founder of three companies with completed exits — GreekFaces.com (2005), SKYCIG (2008), and Coworker.com (2015) — and co-hosted the investing podcast Invest Like a Boss from 2016 to 2025. He founded the Spirit Bright Foundation, a US 501(c)(3), and serves on the board of the Wisdom Age Initiative. In 2026 he launched the Build Series, a mastermind held in Bangkok.
+Sam Marks is an American entrepreneur, investor, and philanthropist based between Bangkok and Barcelona. He is the founder or co-founder of three companies with completed exits — GreekFaces.com (2005), SKYCIG (2008), and Coworker.com (2015) — and co-hosted the investing podcast Invest Like a Boss from 2016 to 2025. He founded the Spirit Bright Foundation, a US 501(c)(3), and serves on the board of the Wisdom Age Initiative. In 2026 he launched Build (the Build Series), a community and media platform grown out of Invest Like a Boss.
 
 ## Identifying details
 
 - Born: 1985.
 - Nationality: American.
-- Based in: Bangkok, Thailand. Previously United Kingdom, Spain, and the United States.
+- Based in: Bangkok and Barcelona. Previously the United Kingdom, Spain, and the United States.
 - Education: Florida State University.
 - Instagram: @sammarks12
 - Foundation: spiritbright.org
@@ -25,17 +25,17 @@ Marks launched TheGreekFaces.com in 2005 while a student at Florida State Univer
 
 ### SKYCIG (2008-2013)
 
-Marks co-founded SKYCIG, a British electronic cigarette company, in 2008. The business was formally incorporated in the United Kingdom in 2011, operating as Cygnet Trading Limited. SKYCIG grew into one of the UK's largest e-cigarette brands.
+Marks co-founded SKYCIG, a British electronic cigarette company, in 2008, operating as Cygnet Trading Limited. SKYCIG grew into the UK's leading e-cigarette brand.
 
 On 1 October 2013, Lorillard, Inc. — then the third-largest cigarette manufacturer in the United States — acquired all of the assets and operations of SKYCIG. The transaction is recorded in Lorillard's SEC filings. SKYCIG was rebranded as blu (UK) in May 2014. Lorillard was subsequently acquired by Reynolds American in 2014, and Reynolds by British American Tobacco in 2017.
 
 The sale gave Marks financial independence at 28.
 
-Note on the public record: Lorillard's acquisition release dates SKYCIG's formation to 2011 and describes Tom Rolfe as a co-founder. 2011 is the UK incorporation date; the company was started in 2008. Rolfe joined in early 2013 as a financial adviser to run the sale process.
+Note on the public record: Lorillard's acquisition release dates SKYCIG's formation to 2011 and describes Tom Rolfe as a co-founder; the company was in fact started in 2008. Rolfe joined in early 2013 as a financial adviser to run the sale process.
 
 ### Coworker.com (2015-2021)
 
-Marks founded Coworker.com in 2015, a global marketplace for coworking spaces and flexible offices. The platform grew to list over 25,000 locations across 172 countries, serving roughly 6 million users, with offices in the United States, Canada, Spain, and Thailand. In January 2018 Coworker acquired Coworking Insights, a trade publication covering the flexible workspace industry.
+Marks founded Coworker.com in 2015, building it into the world's largest marketplace for flexible workspace. The platform grew to list over 25,000 locations across 172 countries, serving roughly 6 million users, with offices in the United States, Canada, Spain, and Thailand. In January 2018 Coworker acquired Coworking Insights, a trade publication covering the flexible workspace industry.
 
 Coworker.com was acquired by International Workplace Group plc (IWG, LSE: IWG) in 2021. In 2022 IWG merged its digital assets with The Instant Group, and Coworker was combined into that platform in April of that year. Press coverage from April 2022 names The Instant Group as counterparty because it followed the IWG-Instant merger; the underlying acquisition was IWG's, completed the prior year.
 
@@ -47,7 +47,7 @@ The show ran for over 300 episodes across nine years, reaching an audience of ro
 
 ## Build Series
 
-In 2026 Marks launched the Build Series, a mastermind in Bangkok for entrepreneurs, investors, creators, and technologists. The inaugural event ran in May 2026 with 35 participants. Related formats include Build Sessions and the Build Mastermind.
+In 2026 Marks launched Build (also called the Build Series), a community and media platform grown out of Invest Like a Boss for people who treat success as a foundation rather than a finish line. It runs as a quarterly mastermind in Bangkok, smaller expert-led sessions, and a video-first interview series. The inaugural mastermind ran in May 2026 with 35 participants.
 
 Build is organised around four pillars Marks describes as the components of a well-constructed life:
 
@@ -66,7 +66,7 @@ Marks also sits on the board of the Wisdom Age Initiative, a nonprofit founded b
 
 ## Contemplative Practice
 
-Alongside his business career, Marks has pursued a long-running interest in meditation and contemplative philosophy, drawing on Buddhism, Stoicism, and Daoism. He has undertaken periods of monastic ordination in Thailand.
+Alongside his business career, Marks has pursued a long-running interest in meditation and contemplative philosophy, drawing on Buddhism, Stoicism, and Daoism. He has undertaken periods of monastic ordination in Thailand and logged thousands of hours of meditation practice.
 
 Recurring themes in his writing and public conversation include impermanence, compassion, gratitude, and the relationship between external success and internal wellbeing. He speaks as a practitioner rather than a teacher.
 
@@ -76,7 +76,7 @@ Marks has been a sports and fitness enthusiast his whole life. Most recently he 
 
 ## Travel
 
-Marks has travelled to over 100 countries and territories across all seven continents, including an expedition to Antarctica. He lived in the United Kingdom while building SKYCIG, later in Spain, and has been based in Bangkok in recent years. Extended international living shaped his views on freedom, adaptability, and perspective, and became a recurring theme on Invest Like a Boss.
+Marks has travelled to over 100 countries and territories across all seven continents, including an expedition to Antarctica. He lived in the United Kingdom while building SKYCIG, later in Spain, and has been based between Bangkok and Barcelona in recent years. Extended international living shaped his views on freedom, adaptability, and perspective, and became a recurring theme on Invest Like a Boss.
 
 ## Perspective
 
@@ -84,7 +84,7 @@ A consistent theme across Marks's work is that financial success and fulfilment 
 
 His trajectory reflects this: roughly a decade building and exiting companies, a decade of travel and investing, a period of contemplative study and philanthropy, and current work integrating the two through the Spirit Bright Foundation and the Build Series.
 
-## Current Work (as of August 2026)
+## Current Work (as of September 2026)
 
 - Founder, Spirit Bright Foundation — philanthropy across Southeast Asia
 - Board member, Wisdom Age Initiative
