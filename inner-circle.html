@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Build Mastermind — For Founders, Investors &amp; Operators | Sam Marks</title>
+  <meta name="description" content="The Build Mastermind — a small, private group of founders, investors, and operators building meaningful companies and lives. By application.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="canonical" href="https://sammarks.co/inner-circle.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Sam Marks — American Entrepreneur, Founder & Host of Invest Like a Boss">
+  <meta property="og:title" content="The Build Mastermind — For Founders, Investors & Operators | Sam Marks">
+  <meta property="og:description" content="The Build Mastermind — a small, private group of founders, investors, and operators building meaningful companies and lives. By application.">
+  <meta property="og:url" content="https://sammarks.co/inner-circle.html">
+  <meta property="og:image" content="https://sammarks.co/portrait.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Build Mastermind — For Founders, Investors & Operators | Sam Marks">
+  <meta name="twitter:description" content="The Build Mastermind — a small, private group of founders, investors, and operators building meaningful companies and lives. By application.">
+  <meta name="twitter:image" content="https://sammarks.co/portrait.jpg">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="index.html">Sam Marks</a>
+      <button class="nav-toggle" aria-label="Menu" aria-controls="nav-links" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="podcast.html">Podcast</a></li>
+        <li><a href="mastermind.html">Mastermind</a></li>
+        <li><a href="foundation.html">Foundation</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <h1>The Build Mastermind</h1>
+      <hr class="accent-rule">
+
+      <p class="lead">A small, private group of founders, investors, and builders applying the <a href="mbrc.html">MBRC</a> framework to build meaningful lives and impactful work together. Membership is by application.</p>
+
+      <h2>The four pillars</h2>
+      <ul class="bullets">
+        <li><strong>Mind</strong> — inner growth</li>
+        <li><strong>Body</strong> — physical growth</li>
+        <li><strong>Roots</strong> — relational growth</li>
+        <li><strong>Capital</strong> — external growth</li>
+      </ul>
+      <p><a href="mbrc.html">The full framework →</a></p>
+
+      <hr class="rule">
+
+      <h2>Who it's for</h2>
+      <ul class="bullets">
+        <li>Experienced founders, operators, and investors with something to build next.</li>
+        <li>People balancing real achievement with a deeper search for meaning.</li>
+        <li>Committed to all four pillars.</li>
+        <li>Contributors, not just consumers — members who give as much as they take.</li>
+      </ul>
+
+      <hr class="rule">
+
+      <h2>Apply</h2>
+      <p class="lead">Membership is by application. Tell us a little about yourself and what you're building — we read every application.</p>
+
+      <form id="apply-form" class="apply-form" novalidate>
+        <div class="field">
+          <label for="f-name">Name <span class="req">*</span></label>
+          <input id="f-name" name="name" type="text" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="f-email">Email <span class="req">*</span></label>
+          <input id="f-email" name="email" type="email" required autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="f-location">Location / City</label>
+          <input id="f-location" name="location" type="text" autocomplete="address-level2">
+        </div>
+        <div class="field">
+          <label for="f-building">What are you building? <span class="req">*</span></label>
+          <textarea id="f-building" name="building" rows="3" required></textarea>
+        </div>
+        <div class="field">
+          <label for="f-why">Why do you want to join?</label>
+          <textarea id="f-why" name="why" rows="4"></textarea>
+        </div>
+        <p id="form-error" class="form-error" role="alert" hidden></p>
+        <button type="submit" class="btn" id="apply-submit">Submit application →</button>
+      </form>
+
+      <div id="apply-thanks" class="apply-thanks" hidden>
+        <p>Thank you — your application has been received. We'll be in touch.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>© 2026 Sam Marks</span>
+      <span class="footer-links">
+        <a href="https://www.linkedin.com/in/sammarks1" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.instagram.com/sammarks12/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://investlikeaboss.com" target="_blank" rel="noopener">Podcast</a>
+        <a href="mbrc.html">MBRC</a>
+      </span>
+    </div>
+  </footer>
+
+  <script>
+    // Capture backend: submissions POST to a Google Form (public endpoint, no server needed).
+    // A scheduled sync mirrors new responses into the Submissions sheet and notifies Sam.
+    const FORM_ACTION = "https://docs.google.com/forms/d/e/1FAIpQLScHynenwXzf6IjRcw6tta0Sulr8LPgb0Dp2qQHqqOFsFkqKog/formResponse";
+    const FIELD_MAP = {
+      name:     "entry.133058275",
+      email:    "entry.978807328",
+      location: "entry.1790158531",
+      building: "entry.1464149873",
+      why:      "entry.1129966949"
+    };
+
+    (function () {
+      const form = document.getElementById("apply-form");
+      const thanks = document.getElementById("apply-thanks");
+      const errBox = document.getElementById("form-error");
+      const submitBtn = document.getElementById("apply-submit");
+
+      function showError(msg) {
+        errBox.textContent = msg;
+        errBox.hidden = false;
+      }
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        errBox.hidden = true;
+
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+
+        const values = {
+          name: form.name.value.trim(),
+          email: form.email.value.trim(),
+          location: form.location.value.trim(),
+          building: form.building.value.trim(),
+          why: form.why.value.trim()
+        };
+
+        const body = new URLSearchParams();
+        Object.keys(FIELD_MAP).forEach(function (k) {
+          body.append(FIELD_MAP[k], values[k] || "");
+        });
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Submitting…";
+
+        // Google Forms does not send CORS headers, so use no-cors: the submit
+        // still records; we cannot read the response, which is expected.
+        fetch(FORM_ACTION, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: body.toString()
+        })
+          .then(function () {
+            form.hidden = true;
+            thanks.hidden = false;
+            thanks.scrollIntoView({ behavior: "smooth", block: "center" });
+          })
+          .catch(function () {
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Submit application →";
+            showError("Something went wrong sending your application. Please try again, or email us directly.");
+          });
+      });
+    })();
+  </script>
+
+  <script src="nav.js"></script>
+  <script defer src="/_vercel/insights/script.js"></script>
+  <script defer src="/_vercel/speed-insights/script.js"></script>
+</body>
+</html>
